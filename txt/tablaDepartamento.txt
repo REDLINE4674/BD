@@ -1,0 +1,10 @@
+CREATE TABLE compania.departamento (
+	nombred VARCHAR(25) NOT NULL UNIQUE,
+	numerod INT NOT NULL,
+	nss_gte CHAR(9) NOT NULL,
+	fechainicgte DATE,
+	CONSTRAINT pk_departamento PRIMARY KEY(numerod),
+	CONSTRAINT key_nombred UNIQUE (nombred),
+	CONSTRAINT fk_nss_gte FOREIGN KEY(nss_gte) REFERENCES
+	compania.empleado(nss)
+);

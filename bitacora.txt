@@ -1,0 +1,329 @@
+2026-10-14 09:56:43.076 CST [13188] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-14 09:56:43.086 CST [13188] LOG:  no se pudo enlazar a la dirección IPv6 «::1»: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+	
+2026-10-14 09:56:43.086 CST [13188] HINT:  ¿Hay otro postmaster en ejecución en el puerto 5433? Si no, aguarde unos segundos y reintente.
+2026-10-14 09:56:43.086 CST [13188] LOG:  no se pudo enlazar a la dirección IPv4 «127.0.0.1»: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+	
+2026-10-14 09:56:43.086 CST [13188] HINT:  ¿Hay otro postmaster en ejecución en el puerto 5433? Si no, aguarde unos segundos y reintente.
+2026-10-14 09:56:43.087 CST [13188] WARNING:  no se pudo crear el socket de escucha para «localhost»
+2026-10-14 09:56:43.087 CST [13188] FATAL:  no se pudo crear ningún socket TCP/IP
+2026-10-14 09:56:43.091 CST [13188] LOG:  el sistema de bases de datos está apagado
+2026-10-14 09:57:11.785 CST [12012] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-14 09:57:11.793 CST [12012] LOG:  escuchando en la dirección IPv6 «::1», port 5433
+2026-10-14 09:57:11.793 CST [12012] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5433
+2026-10-14 09:57:11.876 CST [22068] LOG:  el sistema de bases de datos fue apagado en 2026-10-14 09:56:01 CST
+2026-10-14 09:57:11.917 CST [12012] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2026-10-14 10:02:11.886 CST [16936] LOG:  empezando checkpoint: time
+2026-10-14 10:03:57.926 CST [21980] ERROR:  error de sintaxis en o cerca de «AUTHORIZACION» en carácter 24
+2026-10-14 10:03:57.926 CST [21980] SENTENCIA:  CREATE SCHEMA compania AUTHORIZACION juan;
+2026-10-14 10:04:05.636 CST [16936] LOG:  checkpoint completo: escritos 1018 búfers (6.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=113.189 s, sync=0.503 s, total=113.755 s; archivos sincronizados=317, más largo=0.005 s, promedio=0.002 s; distancia=4815 kB, estimación=4815 kB; lsn=0/1A28C18, lsn de redo=0/1A28B88
+2026-10-14 10:07:11.678 CST [16936] LOG:  empezando checkpoint: time
+2026-10-14 10:07:12.534 CST [16936] LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.798 s, sync=0.026 s, total=0.856 s; archivos sincronizados=8, más largo=0.011 s, promedio=0.004 s; distancia=10 kB, estimación=4334 kB; lsn=0/1A2B480, lsn de redo=0/1A2B428
+2026-10-14 10:13:19.678 CST [21980] ERROR:  error de sintaxis en o cerca de «CHEACK» en carácter 330
+2026-10-14 10:13:19.678 CST [21980] SENTENCIA:  CREATE TABLE compania.empleado (nombrep VARCHAR(15) NOT NULL,apellido VARCHAR(15) NOT NULL, nss CHAR(9) NOT NULL, fecha_nac DATE, direccion VARCHAR(30), ciudad VARCHAR(20), sexo CHAR DEFAULT 'M', salario DECIMAL(10,2) NOT NULL, nsssuper CHAR(9), nd INT NOT NULL, CONSTRAINT pk_empleado PRIMARY KEY (nss),CONSTRAINT check_salario CHEACK (salario<60000));
+2026-10-14 10:17:11.547 CST [16936] LOG:  empezando checkpoint: time
+2026-10-14 10:17:16.882 CST [16936] LOG:  checkpoint completo: escritos 47 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=5.229 s, sync=0.073 s, total=5.335 s; archivos sincronizados=36, más largo=0.010 s, promedio=0.003 s; distancia=202 kB, estimación=3921 kB; lsn=0/1A5DE50, lsn de redo=0/1A5DDF8
+2026-10-14 10:20:07.774 CST [21980] ERROR:  error de sintaxis en o cerca de «FOREINGN» en carácter 204
+2026-10-14 10:20:07.774 CST [21980] SENTENCIA:  CREATE TABLE compania.departamento ( nombred VARCHAR(25) NOT NULL UNIQUE, numerod INT NOT NULL, nss_gte CHAR(9) NOT NULL, fechainicgte DATE, CONSTRAINT key_nombred UNIQUE (nombred),CONSTRAINT fk_nss_gte FOREINGN KEY (nss_gte) REFERENCES compania.empleado(nss));
+2026-10-14 10:22:11.923 CST [16936] LOG:  empezando checkpoint: time
+2026-10-14 10:22:15.961 CST [16936] LOG:  checkpoint completo: escritos 36 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.943 s, sync=0.066 s, total=4.039 s; archivos sincronizados=30, más largo=0.010 s, promedio=0.003 s; distancia=135 kB, estimación=3543 kB; lsn=0/1A7FC30, lsn de redo=0/1A7FBA0
+2026-10-14 10:24:23.247 CST [12012] LOG:  se recibió petición de apagado rápido
+2026-10-14 10:24:23.250 CST [12012] LOG:  abortando transacciones activas
+2026-10-14 10:24:23.259 CST [12012] LOG:  proceso ayudante «logical replication launcher» (PID 12888) terminó con código de salida 1
+2026-10-14 10:24:23.259 CST [16936] LOG:  apagando
+2026-10-14 10:24:23.261 CST [16936] LOG:  empezando checkpoint: shutdown immediate
+2026-10-14 10:24:23.283 CST [16936] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.004 s, sync=0.008 s, total=0.024 s; archivos sincronizados=5, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=3188 kB; lsn=0/1A7FCE0, lsn de redo=0/1A7FCE0
+2026-10-14 10:24:23.298 CST [12012] LOG:  el sistema de bases de datos está apagado
+2026-10-15 08:58:58.624 CST [10988] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-15 08:58:58.631 CST [10988] LOG:  escuchando en la dirección IPv6 «::1», port 5433
+2026-10-15 08:58:58.631 CST [10988] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5433
+2026-10-15 08:58:58.755 CST [6796] LOG:  el sistema de bases de datos fue apagado en 2026-10-14 10:24:23 CST
+2026-10-15 08:58:58.809 CST [10988] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2026-10-15 09:00:48.328 CST [2812] ERROR:  no existe la relación «empleado» en carácter 15
+2026-10-15 09:00:48.328 CST [2812] SENTENCIA:  SELECT * FROM empleado;
+2026-10-15 09:01:18.972 CST [2812] ERROR:  no existe la relación «dbjuan» en carácter 15
+2026-10-15 09:01:18.972 CST [2812] SENTENCIA:  SELECT * FROM dbjuan;
+2026-10-15 09:03:02.472 CST [10988] LOG:  se recibió petición de apagado rápido
+2026-10-15 09:03:02.475 CST [10988] LOG:  abortando transacciones activas
+2026-10-15 09:03:02.482 CST [10988] LOG:  proceso ayudante «logical replication launcher» (PID 26784) terminó con código de salida 1
+2026-10-15 09:03:02.485 CST [2868] LOG:  apagando
+2026-10-15 09:03:02.487 CST [2868] LOG:  empezando checkpoint: shutdown immediate
+2026-10-15 09:03:02.512 CST [2868] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.008 s, sync=0.005 s, total=0.028 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.003 s; distancia=0 kB, estimación=0 kB; lsn=0/1A7FD90, lsn de redo=0/1A7FD90
+2026-10-15 09:03:02.526 CST [10988] LOG:  el sistema de bases de datos está apagado
+2026-10-16 11:33:56.185 CST [31356] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-16 11:33:56.192 CST [31356] LOG:  escuchando en la dirección IPv6 «::1», port 5433
+2026-10-16 11:33:56.193 CST [31356] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5433
+2026-10-16 11:33:56.328 CST [16040] LOG:  el sistema de bases de datos fue apagado en 2026-10-15 09:03:02 CST
+2026-10-16 11:33:56.393 CST [31356] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2026-10-16 11:38:56.331 CST [24252] LOG:  empezando checkpoint: time
+2026-10-16 11:38:56.349 CST [24252] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.004 s, sync=0.003 s, total=0.021 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=0/1A7FE98, lsn de redo=0/1A7FE40
+2026-10-16 11:58:51.184 CST [24568] FATAL:  la autentificación password falló para el usuario «juan»
+2026-10-16 11:58:51.184 CST [24568] DETALLE:  La contraseña no coincide para el usuario «juan».
+	La conexión coincidió con el archivo «C:/Users/UNI/Desktop/BD/Postgresql/sexta/pg_hba.conf» línea 117: «host    all             all             ::1/128                 md5»
+2026-10-16 12:00:28.785 CST [31356] LOG:  se recibió petición de apagado rápido
+2026-10-16 12:00:28.790 CST [31356] LOG:  abortando transacciones activas
+2026-10-16 12:00:28.798 CST [31356] LOG:  proceso ayudante «logical replication launcher» (PID 30672) terminó con código de salida 1
+2026-10-16 12:00:28.799 CST [24252] LOG:  apagando
+2026-10-16 12:00:28.800 CST [24252] LOG:  empezando checkpoint: shutdown immediate
+2026-10-16 12:00:28.812 CST [24252] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.014 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=0 kB; lsn=0/1A7FF48, lsn de redo=0/1A7FF48
+2026-10-16 12:00:28.823 CST [31356] LOG:  el sistema de bases de datos está apagado
+2026-10-17 09:28:00.706 CST [2776] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-17 09:28:00.722 CST [2776] LOG:  escuchando en la dirección IPv6 «::1», port 5433
+2026-10-17 09:28:00.722 CST [2776] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5433
+2026-10-17 09:28:00.892 CST [2136] LOG:  el sistema de bases de datos fue apagado en 2026-10-16 12:00:28 CST
+2026-10-17 09:28:00.987 CST [2776] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2026-10-17 09:33:00.991 CST [5260] LOG:  empezando checkpoint: time
+2026-10-17 09:33:01.819 CST [5260] LOG:  checkpoint completo: escritos 10 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.784 s, sync=0.024 s, total=0.832 s; archivos sincronizados=9, más largo=0.005 s, promedio=0.003 s; distancia=10 kB, estimación=10 kB; lsn=0/1A82898, lsn de redo=0/1A82808
+2026-10-17 09:35:02.454 CST [14860] ERROR:  error de sintaxis en o cerca de «CHAR» en carácter 189
+2026-10-17 09:35:02.454 CST [14860] SENTENCIA:  CREATE TABLE compania.empleado (
+	nombrep VARCHAR(15) NOT NULL,
+	apellido VARCHAR(15) NOT NULL,
+	nss CHAR(9) NOT NULL,
+	fecha_nac DATE,
+	direccion VARCHAR(30),
+	ciudad VARCHAR(20),
+	sexo
+	salario
+	CHAR
+	DECIMAL(10,2)
+	DEFAULT &#39;M&#39;,
+	NOT NULL,
+	nsssuper CHAR(9),
+	nd INT NOT NULL,
+	CONSTRAINT pk_empleado PRIMARY KEY (nss),
+	CONSTRAINT check_salario CHECK(salario&lt;60000)
+	);
+2026-10-17 09:39:17.015 CST [14860] ERROR:  error de sintaxis en o cerca de «;» en carácter 349
+2026-10-17 09:39:17.015 CST [14860] SENTENCIA:  CREATE TABLE compania.empleado (
+	nombrep VARCHAR(15) NOT NULL,
+	apellido VARCHAR(15) NOT NULL,
+	nss CHAR(9) NOT NULL,
+	fecha_nac DATE,
+	direccion VARCHAR(30),
+	ciudad VARCHAR(20),
+	sexo	CHAR	DEFAULT 'M',
+	salario	DECIMAL(10,2) NOT NULL,
+	nsssuper CHAR(9),
+	nd INT NOT NULL,
+	CONSTRAINT pk_empleado PRIMARY KEY (nss),
+	CONSTRAINT check_salario CHECK(salario&lt;60000)
+	);
+2026-10-17 09:43:00.833 CST [5260] LOG:  empezando checkpoint: time
+2026-10-17 09:43:06.662 CST [5260] LOG:  checkpoint completo: escritos 51 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=5.490 s, sync=0.076 s, total=5.830 s; archivos sincronizados=40, más largo=0.008 s, promedio=0.002 s; distancia=203 kB, estimación=203 kB; lsn=0/1AB5538, lsn de redo=0/1AB54E0
+2026-10-17 09:44:52.027 CST [19828] ERROR:  error de sintaxis en o cerca de «REFERENCEScompania» en carácter 268
+2026-10-17 09:44:52.027 CST [19828] SENTENCIA:  CREATE TABLE compania.departamento (nombred VARCHAR(25) NOT NULL UNIQUE,numerod INT NOT NULL,nss_gte CHAR(9) NOT NULL,fechainicgte DATE,CONSTRAINT pk_departamento PRIMARY KEY(numerod),CONSTRAINT key_nombred UNIQUE (nombred),CONSTRAINT fk_nss_gte FOREIGN KEY(nss_gte) REFERENCEScompania.empleado(nss));
+2026-10-17 09:46:07.365 CST [19828] ERROR:  error de sintaxis en o cerca de «REFERENCEScompania» en carácter 268
+2026-10-17 09:46:07.365 CST [19828] SENTENCIA:  CREATE TABLE compania.departamento (nombred VARCHAR(25) NOT NULL UNIQUE,numerod INT NOT NULL,nss_gte CHAR(9) NOT NULL,fechainicgte DATE,CONSTRAINT pk_departamento PRIMARY KEY(numerod),CONSTRAINT key_nombred UNIQUE (nombred),CONSTRAINT fk_nss_gte FOREIGN KEY(nss_gte) REFERENCEScompania.empleado(nss));
+2026-10-17 09:48:57.801 CST [19472] ERROR:  error de sintaxis en o cerca de «REFERENCEScompania» en carácter 268
+2026-10-17 09:48:57.801 CST [19472] SENTENCIA:  CREATE TABLE compania.departamento (nombred VARCHAR(25) NOT NULL UNIQUE,numerod INT NOT NULL,nss_gte CHAR(9) NOT NULL,fechainicgte DATE,CONSTRAINT pk_departamento PRIMARY KEY(numerod),CONSTRAINT key_nombred UNIQUE (nombred),CONSTRAINT fk_nss_gte FOREIGN KEY(nss_gte) REFERENCEScompania.empleado(nss));
+2026-10-17 09:53:00.681 CST [5260] LOG:  empezando checkpoint: time
+2026-10-17 09:53:06.379 CST [5260] LOG:  checkpoint completo: escritos 52 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=5.607 s, sync=0.073 s, total=5.699 s; archivos sincronizados=39, más largo=0.005 s, promedio=0.002 s; distancia=195 kB, estimación=202 kB; lsn=0/1AE6430, lsn de redo=0/1AE63A0
+2026-10-17 09:54:31.429 CST [2776] LOG:  se recibió petición de apagado rápido
+2026-10-17 09:54:31.432 CST [2776] LOG:  abortando transacciones activas
+2026-10-17 09:54:31.442 CST [2776] LOG:  proceso ayudante «logical replication launcher» (PID 1444) terminó con código de salida 1
+2026-10-17 09:54:31.443 CST [5260] LOG:  apagando
+2026-10-17 09:54:31.445 CST [5260] LOG:  empezando checkpoint: shutdown immediate
+2026-10-17 09:54:31.467 CST [5260] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.025 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=182 kB; lsn=0/1AE64E0, lsn de redo=0/1AE64E0
+2026-10-17 09:54:31.483 CST [2776] LOG:  el sistema de bases de datos está apagado
+2026-10-17 09:54:31.947 CST [29128] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-17 09:54:31.959 CST [29128] LOG:  escuchando en la dirección IPv6 «::1», port 5433
+2026-10-17 09:54:31.959 CST [29128] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5433
+2026-10-17 09:54:32.083 CST [31384] LOG:  el sistema de bases de datos fue apagado en 2026-10-17 09:54:31 CST
+2026-10-17 09:54:32.145 CST [29128] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2026-10-17 09:56:12.601 CST [29128] LOG:  se recibió petición de apagado rápido
+2026-10-17 09:56:12.606 CST [29128] LOG:  abortando transacciones activas
+2026-10-17 09:56:12.616 CST [29128] LOG:  proceso ayudante «logical replication launcher» (PID 23624) terminó con código de salida 1
+2026-10-17 09:56:12.619 CST [21092] LOG:  apagando
+2026-10-17 09:56:12.621 CST [21092] LOG:  empezando checkpoint: shutdown immediate
+2026-10-17 09:56:12.653 CST [21092] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.009 s, sync=0.006 s, total=0.035 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.003 s; distancia=0 kB, estimación=0 kB; lsn=0/1AE6590, lsn de redo=0/1AE6590
+2026-10-17 09:56:12.673 CST [29128] LOG:  el sistema de bases de datos está apagado
+2026-10-17 09:56:24.861 CST [30304] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-17 09:56:24.872 CST [30304] LOG:  escuchando en la dirección IPv6 «::1», port 5433
+2026-10-17 09:56:24.873 CST [30304] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5433
+2026-10-17 09:56:25.020 CST [29276] LOG:  el sistema de bases de datos fue apagado en 2026-10-17 09:56:12 CST
+2026-10-17 09:56:25.089 CST [30304] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2026-10-17 10:01:25.008 CST [12936] LOG:  empezando checkpoint: time
+2026-10-17 10:01:26.154 CST [12936] LOG:  checkpoint completo: escritos 13 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.106 s, sync=0.018 s, total=1.150 s; archivos sincronizados=8, más largo=0.006 s, promedio=0.003 s; distancia=42 kB, estimación=42 kB; lsn=0/1AF0E08, lsn de redo=0/1AF0DB0
+2026-10-17 10:06:25.161 CST [12936] LOG:  empezando checkpoint: time
+2026-10-17 10:06:27.318 CST [12936] LOG:  checkpoint completo: escritos 20 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=2.094 s, sync=0.035 s, total=2.158 s; archivos sincronizados=18, más largo=0.004 s, promedio=0.002 s; distancia=57 kB, estimación=57 kB; lsn=0/1AFF278, lsn de redo=0/1AFF220
+2026-10-17 10:11:25.334 CST [12936] LOG:  empezando checkpoint: time
+2026-10-17 10:11:26.934 CST [12936] LOG:  checkpoint completo: escritos 15 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.544 s, sync=0.034 s, total=1.600 s; archivos sincronizados=15, más largo=0.005 s, promedio=0.003 s; distancia=50 kB, estimación=56 kB; lsn=0/1B0BCD0, lsn de redo=0/1B0BC78
+2026-10-17 10:13:23.106 CST [30304] LOG:  se recibió petición de apagado rápido
+2026-10-17 10:13:23.111 CST [30304] LOG:  abortando transacciones activas
+2026-10-17 10:13:23.121 CST [30304] LOG:  proceso ayudante «logical replication launcher» (PID 28488) terminó con código de salida 1
+2026-10-17 10:13:23.122 CST [12936] LOG:  apagando
+2026-10-17 10:13:23.124 CST [12936] LOG:  empezando checkpoint: shutdown immediate
+2026-10-17 10:13:23.141 CST [12936] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.019 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=50 kB; lsn=0/1B0BD80, lsn de redo=0/1B0BD80
+2026-10-17 10:13:23.162 CST [30304] LOG:  el sistema de bases de datos está apagado
+2026-10-17 10:13:36.982 CST [30756] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-17 10:13:36.993 CST [30756] LOG:  escuchando en la dirección IPv6 «::1», port 5433
+2026-10-17 10:13:36.993 CST [30756] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5433
+2026-10-17 10:13:37.121 CST [26464] LOG:  el sistema de bases de datos fue apagado en 2026-10-17 10:13:23 CST
+2026-10-17 10:13:37.175 CST [30756] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2026-10-17 10:15:52.749 CST [30756] LOG:  se recibió petición de apagado rápido
+2026-10-17 10:15:52.756 CST [30756] LOG:  abortando transacciones activas
+2026-10-17 10:15:52.770 CST [30756] LOG:  proceso ayudante «logical replication launcher» (PID 4816) terminó con código de salida 1
+2026-10-17 10:15:52.776 CST [16148] LOG:  apagando
+2026-10-17 10:15:52.781 CST [16148] LOG:  empezando checkpoint: shutdown immediate
+2026-10-17 10:15:52.818 CST [16148] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.010 s, sync=0.007 s, total=0.043 s; archivos sincronizados=2, más largo=0.004 s, promedio=0.004 s; distancia=0 kB, estimación=0 kB; lsn=0/1B0BE30, lsn de redo=0/1B0BE30
+2026-10-17 10:15:52.840 CST [30756] LOG:  el sistema de bases de datos está apagado
+2026-10-19 09:49:59.637 CST [24784] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-19 09:49:59.642 CST [24784] LOG:  escuchando en la dirección IPv6 «::1», port 5433
+2026-10-19 09:49:59.642 CST [24784] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5433
+2026-10-19 09:49:59.728 CST [10308] LOG:  el sistema de bases de datos fue apagado en 2026-10-17 10:15:52 CST
+2026-10-19 09:49:59.796 CST [24784] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2026-10-19 09:54:59.721 CST [27904] LOG:  empezando checkpoint: time
+2026-10-19 09:54:59.764 CST [27904] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.011 s, sync=0.008 s, total=0.048 s; archivos sincronizados=2, más largo=0.004 s, promedio=0.004 s; distancia=0 kB, estimación=0 kB; lsn=0/1B0BF38, lsn de redo=0/1B0BEE0
+2026-10-19 09:56:42.690 CST [25968] ERROR:  error de sintaxis en o cerca de «ASC» en carácter 44
+2026-10-19 09:56:42.690 CST [25968] SENTENCIA:  SELECT nss FROM compania.empleado ORDER BY ASC;
+2026-10-19 10:01:17.115 CST [25968] ERROR:  no existe la columna «nomrbre» en carácter 8
+2026-10-19 10:01:17.115 CST [25968] HINT:  Probablemente quiera hacer referencia a la columna «empleado.nombrep».
+2026-10-19 10:01:17.115 CST [25968] SENTENCIA:  SELECT nomrbre FROM compania.empleado ORDER BY nombre ASC;
+2026-10-19 10:01:43.651 CST [25968] ERROR:  no existe la columna «nombre» en carácter 8
+2026-10-19 10:01:43.651 CST [25968] HINT:  Probablemente quiera hacer referencia a la columna «empleado.nombrep».
+2026-10-19 10:01:43.651 CST [25968] SENTENCIA:  SELECT nombre FROM compania.empleado ORDER BY nombre ASC;
+2026-10-19 10:08:46.208 CST [25968] ERROR:  error de sintaxis en o cerca de «DES» en carácter 46
+2026-10-19 10:08:46.208 CST [25968] SENTENCIA:  SELECT * FROM compania.empleado ORDER BY nss DES;
+2026-10-19 10:15:40.107 CST [25968] ERROR:  no existe la columna «edad» en carácter 16
+2026-10-19 10:15:40.107 CST [25968] SENTENCIA:  SELECT nombrep,edad FROM compania.empleado WHERE edad = (SELECT MAX(edad) FROM compania.empleado);
+2026-10-19 10:17:28.109 CST [25968] ERROR:  error de sintaxis en o cerca de «=» en carácter 55
+2026-10-19 10:17:28.109 CST [25968] SENTENCIA:  SELECT nombrep,fecha_nac FROM compania.empleado WHERE = fecha_nac(SELECT MAX(fecha_nac) FROM compania.empleado);
+2026-10-19 10:20:18.613 CST [25968] ERROR:  error de sintaxis en o cerca de «=» en carácter 55
+2026-10-19 10:20:18.613 CST [25968] SENTENCIA:  SELECT nombrep,fecha_nac FROM compania.empleado WHERE = fecha_nac(SELECT MIN(fecha_nac) FROM compania.empleado);
+2026-10-19 10:24:43.566 CST [25968] ERROR:  error de sintaxis en o cerca de «=» en carácter 55
+2026-10-19 10:24:43.566 CST [25968] SENTENCIA:  SELECT nombrep,fecha_nac FROM compania.empleado WHERE = fecha_nac(SELECT MIN(fecha_nac) FROM compania.empleado);
+2026-10-19 10:27:09.222 CST [25968] ERROR:  la columna «empleado.nombrep» debe aparecer en la cláusula GROUP BY o ser usada en una función de agregación en carácter 8
+2026-10-19 10:27:09.222 CST [25968] SENTENCIA:  SELECT * FROM compania.empleado GROUP BY ciudad;
+2026-10-19 10:46:14.722 CST [24784] LOG:  se recibió petición de apagado rápido
+2026-10-19 10:46:14.734 CST [24784] LOG:  abortando transacciones activas
+2026-10-19 10:46:14.742 CST [24784] LOG:  proceso ayudante «logical replication launcher» (PID 12968) terminó con código de salida 1
+2026-10-19 10:46:14.744 CST [27904] LOG:  apagando
+2026-10-19 10:46:14.746 CST [27904] LOG:  empezando checkpoint: shutdown immediate
+2026-10-19 10:46:14.781 CST [27904] LOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.004 s, sync=0.005 s, total=0.037 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.003 s; distancia=0 kB, estimación=0 kB; lsn=0/1B0BFE8, lsn de redo=0/1B0BFE8
+2026-10-19 10:46:14.794 CST [24784] LOG:  el sistema de bases de datos está apagado
+2026-10-21 09:44:49.057 CST [22620] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-21 09:44:49.068 CST [22620] LOG:  escuchando en la dirección IPv6 «::1», port 5433
+2026-10-21 09:44:49.068 CST [22620] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5433
+2026-10-21 09:44:49.251 CST [24740] LOG:  el sistema de bases de datos fue apagado en 2026-10-19 10:46:14 CST
+2026-10-21 09:44:49.331 CST [22620] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2026-10-21 09:50:09.989 CST [26360] LOG:  empezando checkpoint: time
+2026-10-21 09:50:10.014 CST [26360] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.006 s, sync=0.004 s, total=0.029 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=0/1B0C108, lsn de redo=0/1B0C0B0
+2026-10-21 09:52:33.412 CST [22620] LOG:  se recibió petición de apagado rápido
+2026-10-21 09:52:33.415 CST [22620] LOG:  abortando transacciones activas
+2026-10-21 09:52:33.423 CST [22620] LOG:  proceso ayudante «logical replication launcher» (PID 14324) terminó con código de salida 1
+2026-10-21 09:52:33.424 CST [26360] LOG:  apagando
+2026-10-21 09:52:33.426 CST [26360] LOG:  empezando checkpoint: shutdown immediate
+2026-10-21 09:52:33.443 CST [26360] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.020 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=0 kB; lsn=0/1B0C1B8, lsn de redo=0/1B0C1B8
+2026-10-21 09:52:33.461 CST [22620] LOG:  el sistema de bases de datos está apagado
+2026-10-21 10:00:47.944 CST [8228] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-21 10:00:47.951 CST [8228] LOG:  escuchando en la dirección IPv6 «::1», port 5433
+2026-10-21 10:00:47.951 CST [8228] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5433
+2026-10-21 10:00:48.039 CST [4640] LOG:  el sistema de bases de datos fue apagado en 2026-10-21 09:59:24 CST
+2026-10-21 10:00:48.071 CST [8228] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2026-10-21 10:05:48.027 CST [7488] LOG:  empezando checkpoint: time
+2026-10-21 10:05:51.916 CST [7488] LOG:  checkpoint completo: escritos 38 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.851 s, sync=0.020 s, total=3.893 s; archivos sincronizados=11, más largo=0.003 s, promedio=0.002 s; distancia=213 kB, estimación=213 kB; lsn=0/15AA540, lsn de redo=0/15AA4E8
+2026-10-21 10:10:48.923 CST [7488] LOG:  empezando checkpoint: time
+2026-10-21 10:10:55.218 CST [7488] LOG:  checkpoint completo: escritos 57 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=6.215 s, sync=0.065 s, total=6.296 s; archivos sincronizados=42, más largo=0.005 s, promedio=0.002 s; distancia=215 kB, estimación=215 kB; lsn=0/15E01E8, lsn de redo=0/15E0158
+2026-10-21 10:12:08.717 CST [8228] LOG:  se recibió petición de apagado rápido
+2026-10-21 10:12:08.721 CST [8228] LOG:  abortando transacciones activas
+2026-10-21 10:12:08.729 CST [8228] LOG:  proceso ayudante «logical replication launcher» (PID 27588) terminó con código de salida 1
+2026-10-21 10:12:08.729 CST [7488] LOG:  apagando
+2026-10-21 10:12:08.732 CST [7488] LOG:  empezando checkpoint: shutdown immediate
+2026-10-21 10:12:08.746 CST [7488] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.017 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=193 kB; lsn=0/15E0298, lsn de redo=0/15E0298
+2026-10-21 10:12:08.760 CST [8228] LOG:  el sistema de bases de datos está apagado
+2026-10-21 10:16:32.262 CST [22300] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-21 10:16:32.270 CST [22300] LOG:  escuchando en la dirección IPv6 «::1», port 5433
+2026-10-21 10:16:32.270 CST [22300] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5433
+2026-10-21 10:16:32.367 CST [18196] LOG:  el sistema de bases de datos fue apagado en 2026-10-21 10:15:49 CST
+2026-10-21 10:16:32.405 CST [22300] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2026-10-21 10:21:32.358 CST [14012] LOG:  empezando checkpoint: time
+2026-10-21 10:21:40.480 CST [14012] LOG:  checkpoint completo: escritos 76 búfers (0.5%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=8.013 s, sync=0.090 s, total=8.126 s; archivos sincronizados=51, más largo=0.005 s, promedio=0.002 s; distancia=276 kB, estimación=276 kB; lsn=0/15B9FC8, lsn de redo=0/15B9F70
+2026-10-21 10:30:03.181 CST [22300] LOG:  se recibió petición de apagado rápido
+2026-10-21 10:30:03.185 CST [22300] LOG:  abortando transacciones activas
+2026-10-21 10:30:03.192 CST [22300] LOG:  proceso ayudante «logical replication launcher» (PID 31680) terminó con código de salida 1
+2026-10-21 10:30:03.193 CST [14012] LOG:  apagando
+2026-10-21 10:30:03.195 CST [14012] LOG:  empezando checkpoint: shutdown immediate
+2026-10-21 10:30:03.213 CST [14012] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.020 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=248 kB; lsn=0/15BA090, lsn de redo=0/15BA090
+2026-10-21 10:30:03.228 CST [22300] LOG:  el sistema de bases de datos está apagado
+2026-10-21 10:31:13.973 CST [21808] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-21 10:31:13.979 CST [21808] LOG:  escuchando en la dirección IPv6 «::1», port 5433
+2026-10-21 10:31:13.979 CST [21808] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5433
+2026-10-21 10:31:14.060 CST [29924] LOG:  el sistema de bases de datos fue apagado en 2026-10-21 10:30:03 CST
+2026-10-21 10:31:14.098 CST [21808] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2026-10-21 10:31:50.658 CST [6204] ERROR:  error de sintaxis en o cerca de «/» en carácter 1
+2026-10-21 10:31:50.658 CST [6204] SENTENCIA:  /t
+	;
+2026-10-21 10:36:14.052 CST [7552] LOG:  empezando checkpoint: time
+2026-10-21 10:36:15.272 CST [7552] LOG:  checkpoint completo: escritos 13 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.120 s, sync=0.081 s, total=1.223 s; archivos sincronizados=10, más largo=0.065 s, promedio=0.009 s; distancia=55 kB, estimación=55 kB; lsn=0/15C8040, lsn de redo=0/15C7FD0
+2026-10-21 10:41:14.287 CST [7552] LOG:  empezando checkpoint: time
+2026-10-21 10:41:18.780 CST [7552] LOG:  checkpoint completo: escritos 41 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=4.420 s, sync=0.056 s, total=4.494 s; archivos sincronizados=35, más largo=0.004 s, promedio=0.002 s; distancia=159 kB, estimación=159 kB; lsn=0/15EFED0, lsn de redo=0/15EFE78
+2026-10-21 10:49:15.783 CST [21808] LOG:  proceso de servidor (PID 6204) fue terminado por una excepción 0xC000013A
+2026-10-21 10:49:15.783 CST [21808] DETALLE:  El proceso que falló estaba ejecutando: select* from editoriales;
+2026-10-21 10:49:15.783 CST [21808] HINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+2026-10-21 10:49:15.784 CST [21808] LOG:  terminando todos los otros procesos de servidor activos
+2026-10-21 10:49:15.799 CST [21808] LOG:  se recibió petición de apagado rápido
+^C2026-10-26 09:52:27.799 CST [15864] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-26 09:52:27.811 CST [15864] LOG:  escuchando en la dirección IPv6 «::1», port 5433
+2026-10-26 09:52:27.811 CST [15864] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5433
+2026-10-26 09:52:28.028 CST [20612] LOG:  el sistema de bases de datos fue apagado en 2026-10-21 09:52:33 CST
+2026-10-26 09:52:28.096 CST [15864] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2026-10-26 09:53:18.165 CST [32068] ERROR:  error de sintaxis en o cerca de «;» en carácter 26
+2026-10-26 09:53:18.165 CST [32068] SENTENCIA:  SELECT * FROM compania.*
+	;
+2026-10-26 09:57:28.067 CST [10000] LOG:  empezando checkpoint: time
+2026-10-26 09:57:28.329 CST [10000] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.028 s, sync=0.067 s, total=0.267 s; archivos sincronizados=2, más largo=0.040 s, promedio=0.034 s; distancia=0 kB, estimación=0 kB; lsn=0/1B0C2C0, lsn de redo=0/1B0C268
+2026-10-26 10:12:28.703 CST [10000] LOG:  empezando checkpoint: time
+2026-10-26 10:12:29.060 CST [10000] LOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.333 s, sync=0.013 s, total=0.358 s; archivos sincronizados=3, más largo=0.007 s, promedio=0.005 s; distancia=14 kB, estimación=14 kB; lsn=0/1B0FB18, lsn de redo=0/1B0FAC0
+2026-10-26 10:17:28.068 CST [10000] LOG:  empezando checkpoint: time
+2026-10-26 10:17:29.035 CST [10000] LOG:  checkpoint completo: escritos 9 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.909 s, sync=0.026 s, total=0.968 s; archivos sincronizados=8, más largo=0.012 s, promedio=0.004 s; distancia=26 kB, estimación=26 kB; lsn=0/1B16698, lsn de redo=0/1B16640
+2026-10-26 10:22:20.389 CST [32068] ERROR:  error de sintaxis en o cerca de «CRETE» en carácter 1
+2026-10-26 10:22:20.389 CST [32068] SENTENCIA:  CRETE VIEW empleados_departamento_info AS SELECT nombrep,apellido,ciudad,nombred FROM compania.empleado INNER JOIN compania.departamento ON nd = numerod;
+2026-10-26 10:27:28.049 CST [10000] LOG:  empezando checkpoint: time
+2026-10-26 10:27:30.519 CST [10000] LOG:  checkpoint completo: escritos 22 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=2.396 s, sync=0.042 s, total=2.471 s; archivos sincronizados=18, más largo=0.010 s, promedio=0.003 s; distancia=104 kB, estimación=104 kB; lsn=0/1B30958, lsn de redo=0/1B308C8
+2026-10-26 10:32:28.532 CST [10000] LOG:  empezando checkpoint: time
+2026-10-26 10:32:30.828 CST [10000] LOG:  checkpoint completo: escritos 21 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=2.216 s, sync=0.044 s, total=2.297 s; archivos sincronizados=17, más largo=0.010 s, promedio=0.003 s; distancia=99 kB, estimación=104 kB; lsn=0/1B49818, lsn de redo=0/1B497C0
+2026-10-26 10:51:31.592 CST [15864] LOG:  proceso de servidor (PID 32068) fue terminado por una excepción 0xC000013A
+2026-10-26 10:51:31.592 CST [15864] DETALLE:  El proceso que falló estaba ejecutando: SELECT * FROM empleados_sede;
+2026-10-26 10:51:31.592 CST [15864] HINT:  Vea el archivo «ntstatus.h» para una descripción del valor hexadecimal.
+2026-10-26 10:51:31.592 CST [15864] LOG:  terminando todos los otros procesos de servidor activos
+2026-10-26 10:51:31.603 CST [15864] LOG:  se recibió petición de apagado rápido
+^C2026-10-28 10:16:39.223 CST [31588] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-28 10:16:39.231 CST [31588] LOG:  escuchando en la dirección IPv6 «::1», port 5433
+2026-10-28 10:16:39.231 CST [31588] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5433
+2026-10-28 10:16:39.343 CST [25148] LOG:  el sistema de bases de datos fue apagado en 2026-10-28 10:15:40 CST
+2026-10-28 10:16:39.376 CST [31588] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2026-10-28 10:18:32.173 CST [35512] ERROR:  no existe el tipo «varchat» en carácter 65
+2026-10-28 10:18:32.173 CST [35512] SENTENCIA:  CREATE TABLE producto ( id INT PRIMARY KEY NOT NULL  , 
+	nombre VARCHAT(30) NOT NULL, 
+	precio DECIMAL (4,2));
+2026-10-28 10:19:02.466 CST [35512] ERROR:  no existe el tipo «varchat» en carácter 65
+2026-10-28 10:19:02.466 CST [35512] SENTENCIA:  CREATE TABLE producto ( id INT PRIMARY KEY NOT NULL  , 
+	nombre VARCHAT(30) NOT NULL, 
+	precio DECIMAL (4,2));
+2026-10-28 10:21:39.336 CST [28256] LOG:  empezando checkpoint: time
+2026-10-28 10:21:47.059 CST [28256] LOG:  checkpoint completo: escritos 72 búfers (0.4%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=7.639 s, sync=0.071 s, total=7.727 s; archivos sincronizados=42, más largo=0.003 s, promedio=0.002 s; distancia=400 kB, estimación=400 kB; lsn=0/15D8FB0, lsn de redo=0/15D8F58
+2026-10-28 10:31:39.067 CST [28256] LOG:  empezando checkpoint: time
+2026-10-28 10:31:43.108 CST [28256] LOG:  checkpoint completo: escritos 37 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.969 s, sync=0.056 s, total=4.042 s; archivos sincronizados=28, más largo=0.006 s, promedio=0.002 s; distancia=133 kB, estimación=373 kB; lsn=0/15FA4E8, lsn de redo=0/15FA458
+2026-10-28 10:41:39.127 CST [28256] LOG:  empezando checkpoint: time
+2026-10-28 10:41:42.550 CST [28256] LOG:  checkpoint completo: escritos 31 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.325 s, sync=0.081 s, total=3.423 s; archivos sincronizados=27, más largo=0.010 s, promedio=0.003 s; distancia=127 kB, estimación=349 kB; lsn=0/161A388, lsn de redo=0/161A330
+2026-10-28 10:43:21.206 CST [31588] LOG:  se recibió petición de apagado rápido
+2026-10-28 10:43:21.210 CST [6548] ERROR:  cancelando la sentencia debido a una petición del usuario
+2026-10-28 10:43:21.214 CST [31588] LOG:  abortando transacciones activas
+2026-10-28 10:43:21.215 CST [35512] FATAL:  terminando la conexión debido a una orden del administrador
+2026-10-28 10:43:21.218 CST [31588] LOG:  proceso ayudante «logical replication launcher» (PID 6548) terminó con código de salida 1
+2026-10-28 10:43:21.251 CST [28256] LOG:  apagando
+2026-10-28 10:43:21.258 CST [28256] LOG:  empezando checkpoint: shutdown immediate
+2026-10-28 10:43:21.278 CST [28256] LOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.002 s, total=0.028 s; archivos sincronizados=1, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=314 kB; lsn=0/161A438, lsn de redo=0/161A438
+2026-10-28 10:43:21.307 CST [31588] LOG:  el sistema de bases de datos está apagado
+2026-10-28 10:44:08.461 CST [20260] LOG:  iniciando PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit
+2026-10-28 10:44:08.468 CST [20260] LOG:  escuchando en la dirección IPv6 «::1», port 5433
+2026-10-28 10:44:08.468 CST [20260] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5433
+2026-10-28 10:44:08.655 CST [8096] LOG:  el sistema de bases de datos fue apagado en 2026-10-28 10:43:21 CST
+2026-10-28 10:44:08.694 CST [20260] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2026-10-28 10:46:18.507 CST [20260] LOG:  se recibió petición de apagado rápido
+2026-10-28 10:46:18.513 CST [20260] LOG:  abortando transacciones activas
+2026-10-28 10:46:18.520 CST [20260] LOG:  proceso ayudante «logical replication launcher» (PID 17656) terminó con código de salida 1
+2026-10-28 10:46:18.524 CST [32884] LOG:  apagando
+2026-10-28 10:46:18.525 CST [32884] LOG:  empezando checkpoint: shutdown immediate
+2026-10-28 10:46:18.558 CST [32884] LOG:  checkpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.009 s, sync=0.008 s, total=0.035 s; archivos sincronizados=4, más largo=0.003 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=0/161A4E8, lsn de redo=0/161A4E8
+2026-10-28 10:46:18.571 CST [20260] LOG:  el sistema de bases de datos está apagado

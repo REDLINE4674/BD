@@ -1,0 +1,3 @@
+CREATE TABLE ventas (id_producto_vendido INT NOT NULL , 
+cantidad_vendida INT NOT NULL, 
+CONSTRAINT fk_id_producto_vendido FOREIGN KEY (id_producto_vendido) REFERENCES producto (id));

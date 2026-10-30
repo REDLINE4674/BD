@@ -1,0 +1,15 @@
+INSERT INTO compania.departamento VALUES ('INVESTIGACION', 5, '333445555',
+'1978-05-22');
+INSERT INTO compania.departamento VALUES ('ADMINISTRACION', 4,
+'987654321', '1985-07-01');
+INSERT INTO compania.departamento VALUES ('ESTUDIOS AMBIENTALES', 7,
+'123456789', '2000-05-11');
+INSERT INTO compania.departamento VALUES ('DIRECCION', 1, '888665555',
+'1971-06-19');
+
+INSERT INTO compania.departamento VALUES ('CONTABILIDAD', 2, '466557975',
+'2004-03-20');
+INSERT INTO compania.departamento VALUES ('PRODUCCION', 3, '878672843',
+'2005-10-25');
+INSERT INTO compania.departamento VALUES ('PERSONAL', 6, '775833245',
+'2006-01-01');

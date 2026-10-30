@@ -1,0 +1,15 @@
+CREATE TABLE compania.empleado (
+	nombrep VARCHAR(15) NOT NULL,
+	apellido VARCHAR(15) NOT NULL,
+	nss CHAR(9) NOT NULL,
+	fecha_nac DATE,
+	dirección VARCHAR(30),
+	ciudad VARCHAR(20),
+	sexo CHAR DEFAULT 'M',
+	salario DECIMAL(10,2) NOT NULL,
+	nsssuper CHAR(9),
+	nd INT NOT NULL,
+CONSTRAINT pk_empleado PRIMARY KEY (nss),
+CONSTRAINT check_salario CHECK (salario<60000)
+
+);
